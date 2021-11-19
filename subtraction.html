@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Subtraction</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="quiz_game.css">
+        <script src="subtraction.js"></script>
+    </head>
+    <body onload="update()">
+        <h4 id="player1_name"></h4><span id="player1_score"></span>
+        <br>
+        <h4 id="player2_name"></h4><span id="player2_score"></span>
+
+        <center>
+            <marquee onmouseover="this.stop()" onmouseout="this.start()"><h2>The Subtraction Quiz Game!</h2><br></marquee>
+            <div>
+                <h4>Question Turn :<span id="qturn"></span></h4><br>
+                <h4>Answer Turn :<span id="aturn"></span></h4><br><br>
+                <label id="note_subtraction" class="col-lg-7 col-md-8 col-sm-10 col-xs-11"><b class="text-danger">Rules: </b>The minuend and the subtrahend should be greater or equal to zero. The minuend should be greater than the subtrahend.</label><br><br><br>
+                <div class="col-lg-5 col-md-8 col-sm-10 col-xs-11" id="output">
+                    <div id="content"></div>
+                </div><br><br>
+                <h4 id="label1">Minuend</h4><br>
+                <input id="n1" placeholder="Minuend" type="number" class="col-lg-5 col-md-8 col-sm-10 col-xs-11"><br>
+                <h4 id="label2">Subtrahend</h4><br>
+                <input id="n2" placeholder="Subtrahend" type="number" class="col-lg-5 col-md-8 col-sm-10 col-xs-11">
+                <br><br>
+                <button class="btn btn-success col-lg-4 col-md-6 col-sm-7 col-xs-9" id="send" onclick="send()">Send</button>
+            </div>
+        </center>
+    </body>
+</html>
